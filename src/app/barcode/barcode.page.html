@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Barcode Scanner
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Barcode</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      {{ barcode }}
+    </ion-card-content>
+  </ion-card>
+  <ion-button color="primary" (click)=scan()>Scan</ion-button>
+</ion-content>

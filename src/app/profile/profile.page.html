@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button menu="m1"></ion-menu-button>
+        </ion-buttons>
+    <ion-title>profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-list-header>profile</ion-list-header>
+  <ion-avatar class="ion-margin-start">
+    
+  </ion-avatar>  
+
+  <ion-item>
+    <ion-label>NAMA : email </ion-label>
+  </ion-item>
+  <ion-item>
+    
+    <ion-label position="floating">Name</ion-label>
+    <ion-input text-center required type="text" [(ngModel)]="user.name"></ion-input>
+    </ion-item>
+   
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+        <ion-tabs>
+         <ion-tab-bar slot="bottom">
+           <ion-tab-button tab="search" routerLink="/venue" routerDirection="forward">
+             <ion-label>Browse</ion-label>
+             <ion-icon name="search"></ion-icon>
+           </ion-tab-button>
+           <ion-tab-button tab="barcode" routerLink="/barcode" routerDirection="backward">
+            <ion-label>Barcode</ion-label>
+            <ion-icon name="barcode"></ion-icon>
+          </ion-tab-button>
+           <ion-tab-button tab="profile" routerLink="/profile" routerDirection="forward">
+             <ion-label>Profile</ion-label>
+             <ion-icon name="person"></ion-icon>
+           </ion-tab-button>
+         </ion-tab-bar>
+       </ion-tabs>
+ </ion-toolbar> 
+</ion-footer>

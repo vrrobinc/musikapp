@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="m1"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Learn How To Play Music</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card *ngFor="let venue of loadedVenue.slice(0)">
+          <ion-img [src]="venue.imageUrl"></ion-img>
+          <ion-card-header>
+            <ion-card-title>{{ venue.name }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p> {{ venue.description }}</p>
+            <ion-button slot="end" routerLink="/idea-list" (click)='onClick()'>Learn Now</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid> 
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+        <ion-tabs>
+         <ion-tab-bar slot="bottom">
+           <ion-tab-button tab="search" routerLink="/venue" routerDirection="backward">
+             <ion-label>Browse</ion-label>
+             <ion-icon name="search"></ion-icon>
+           </ion-tab-button>
+           <ion-tab-button tab="barcode" routerLink="/barcode" routerDirection="backward">
+            <ion-label>Barcode</ion-label>
+            <ion-icon name="barcode"></ion-icon>
+          </ion-tab-button>
+           <ion-tab-button tab="profile" routerLink="/profile" routerDirection="backward">
+             <ion-label>Profile</ion-label>
+             <ion-icon name="person"></ion-icon>
+           </ion-tab-button>
+         </ion-tab-bar>
+       </ion-tabs>
+ </ion-toolbar> 
+</ion-footer>
+<!-- 
+ <script>
+    const controller = document.querySelector('ion-alert-controller');
+    const button = document.querySelector('ion-button');
+    button.addEventListener('click', handleButtonClick);
+    function handleButtonClick() {
+      controller.create({
+        header: 'Learn',
+        message: 'Are you sure you want to learn this lesson ?',
+        buttons: ['Yes', 'Cancel']
+      }).then(alert => {
+        alert.present();
+      });
+    }
+  </script> -->
